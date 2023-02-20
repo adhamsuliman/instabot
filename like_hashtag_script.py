@@ -21,6 +21,12 @@ class insta:
         self.IG_USERNAME = os.environ['IG_USERNAME']
         self.IG_PASSWORD = os.environ['IG_PASSWORD']
 
+        # Instantiate Client
+        self.cl = Client()
+        self.cl.challenge_code_handler = self.challenge_code_handler
+        self.cl.change_password_handler = self.change_password_handler
+        self.cl.login('i.spy.padthai', 'Padthai894')
+
     def get_code_from_email(self, username):
         mail = imaplib.IMAP4_SSL("imap.gmail.com")
         mail.login(self.CHALLENGE_EMAIL, self.CHALLENGE_PASSWORD)
@@ -75,25 +81,19 @@ class insta:
         return password
 
     def start(self):
-        # Instantiate Client
-        cl = Client()
-        cl.challenge_code_handler = self.challenge_code_handler
-        cl.change_password_handler = self.change_password_handler
-        cl.login('i.spy.padthai', 'Padthai894')
-
         # find top 20
-        hashtag = cl.hashtag_medias_recent('thaifood', 5)
+        hashtag = self.cl.hashtag_medias_recent('thaifood', 5)
 
         for i, h in enumerate(hashtag):
             pictures = h.dict()['resources']
             if len(pictures) > 1:
                 for p in pictures:
                     pk = p['pk']
-                    cl.media_like(pk)
+                    self.cl.media_like(pk)
                     continue
             else:
                 pk = h.dict()['pk']
-                cl.media_like(pk)
+                self.cl.media_like(pk)
             print(f'Liked {i} pictures')
 
 
