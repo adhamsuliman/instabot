@@ -12,6 +12,7 @@ from instagrapi.mixins.challenge import ChallengeChoice
 from dotenv import load_dotenv,find_dotenv
 import os
 import time
+import numpy as np
 
 class insta:
     def __init__(self):
@@ -101,5 +102,7 @@ class insta:
 if __name__ == "__main__":
     i = insta()
     while True:
-        i.start()
+        x = np.random.random_integers(low=1, high=6, size=1)[0]
+        if x == 3:
+            i.start()
         time.sleep(600)
