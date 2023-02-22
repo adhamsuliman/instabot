@@ -102,7 +102,7 @@ class insta:
 if __name__ == "__main__":
     i = insta()
     while True:
-        x = np.random.random_integers(low=1, high=6, size=1)[0]
+        x = np.random.randint(1, 4)
         if x == 3:
             i.start()
         time.sleep(600)
