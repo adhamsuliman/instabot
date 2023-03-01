@@ -16,7 +16,7 @@ import numpy as np
 
 class insta:
     def __init__(self):
-        load_dotenv(find_dotenv())
+        load_dotenv()
         self.CHALLENGE_EMAIL = os.environ['CHALLENGE_EMAIL']
         self.CHALLENGE_PASSWORD = os.environ['CHALLENGE_PASSWORD']
         self.IG_USERNAME = os.environ['IG_USERNAME']

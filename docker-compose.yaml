@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  instabot_doa:
+      build: doa/.
+      image: python3.10-buster
+      container_name: instabot_doa
+      restart: unless-stopped
+      ports:
+        - 8000-8500:8008-8500
+  instabot_pad:
+      build: pad/.
+      image: python3.10-buster
+      container_name: instabot_pad
+      restart: unless-stopped
+      ports:
+        - 8500-9000:8500-9000
+      
