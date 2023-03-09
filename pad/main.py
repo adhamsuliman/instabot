@@ -25,8 +25,8 @@ class insta:
         # Instantiate Client
         self.cl = Client()
         self.cl.challenge_code_handler = self.challenge_code_handler
-        self.cl.change_password_handler = self.change_password_handler
-        self.cl.login('i.spy.padthai', 'Padthai894')
+        #self.cl.change_password_handler = self.change_password_handler
+        self.cl.login(self.IG_USERNAME, self.IG_PASSWORD)
 
     def get_code_from_email(self, username):
         mail = imaplib.IMAP4_SSL("imap.gmail.com")
@@ -101,6 +101,7 @@ class insta:
 
 if __name__ == "__main__":
     i = insta()
+    print('bot_started')
     while True:
         x = np.random.randint(1, 4)
         if x == 3:
