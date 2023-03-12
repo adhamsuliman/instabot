@@ -9,6 +9,7 @@ import random
 
 from instagrapi import Client
 from instagrapi.mixins.challenge import ChallengeChoice
+import instaloader
 from dotenv import load_dotenv,find_dotenv
 import os
 import time
@@ -27,6 +28,8 @@ class insta:
         self.cl.challenge_code_handler = self.challenge_code_handler
         self.cl.change_password_handler = self.change_password_handler
         self.cl.login(self.IG_USERNAME, self.IG_PASSWORD)
+        self.L = instaloader.Instaloader()
+        self.L.login(self.IG_USERNAME, self.IG_PASSWORD)
 
     def get_code_from_email(self, username):
         mail = imaplib.IMAP4_SSL("imap.gmail.com")
@@ -83,6 +86,12 @@ class insta:
 
     def start(self):
         # find top 20
+        location = self.cl.location_search(31.003335,29.015312)[0]
+        location = self.cl.location_complete(location)
+        self.cl.location_medias_recent(location.external_id,100)
+
+        '{"name":"Russia, Saint-Petersburg","address":"Russia, Saint-Petersburg","lat":59.93318,"lng":30.30605,"external_source":"facebook_places","facebook_places_id":107617247320879}'
+
         hashtag = self.cl.hashtag_medias_recent('thaifood', 5)
 
         for i, h in enumerate(hashtag):
