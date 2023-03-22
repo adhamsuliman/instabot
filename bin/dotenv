@@ -1,4 +1,4 @@
-#!/Users/adhamsuliman/Documents/personal_projects/friends/jeremy/instabot/bin/python
+#!/Users/adhamsuliman/Documents/personal_projects/friends/jeremy/instabot/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
