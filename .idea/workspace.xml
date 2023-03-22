@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="403aff59-bab5-43f4-9934-46eac3bf914a" name="Changes" comment="adding lib for venv" />
+    <list default="true" id="403aff59-bab5-43f4-9934-46eac3bf914a" name="Changes" comment="headless browser and removing lcoations">
+      <change beforePath="$PROJECT_DIR$/pad/instappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/pad/instappy.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,7 +151,7 @@
       <updated>1678320786741</updated>
       <workItem from="1678320787906" duration="3597000" />
       <workItem from="1678325767198" duration="2901000" />
-      <workItem from="1679449668136" duration="916000" />
+      <workItem from="1679449668136" duration="1269000" />
     </task>
     <task id="LOCAL-00001" summary="installing library dir for packages">
       <created>1679450281849</created>
@@ -179,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679450517097</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="headless browser and removing lcoations">
+      <created>1679450668257</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679450668257</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,10 +210,11 @@
     <MESSAGE value="adding instapy for padthai" />
     <MESSAGE value="adding lib" />
     <MESSAGE value="adding lib for venv" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding lib for venv" />
+    <MESSAGE value="headless browser and removing lcoations" />
+    <option name="LAST_COMMIT_MESSAGE" value="headless browser and removing lcoations" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/instabot$instappy.coverage" NAME="instappy Coverage Results" MODIFIED="1678327789411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/doa" />
-    <SUITE FILE_PATH="coverage/instabot$instappy__1_.coverage" NAME="instappy pad Coverage Results" MODIFIED="1679450428309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pad" />
+    <SUITE FILE_PATH="coverage/instabot$instappy__1_.coverage" NAME="instappy pad Coverage Results" MODIFIED="1679450649932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pad" />
   </component>
 </project>
