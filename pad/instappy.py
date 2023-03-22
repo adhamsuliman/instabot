@@ -20,14 +20,14 @@ set_workspace(path=None)
 
 
 def job():
-    session = InstaPy(username=insta_username, password=insta_password, want_check_browser=False)
+    session = InstaPy(username=insta_username, password=insta_password, headless_browser=True, want_check_browser=False)
     with smart_run(session):
-        session.set_smart_location_hashtags([(13.7563,100.5018)], radius=50)
+        # session.set_smart_location_hashtags([(13.7563,100.5018)], radius=50)
         session.set_do_comment(enabled=True, percentage=20)
         session.set_comments(["That's a great look Pad Thai! @{}"], media='Photo')
         session.set_do_follow(enabled=True, percentage=5, times=2)
         # session.set_mandatory_words(['#ramadan', '#instafood'])
-        session.like_by_tags(['padthai', 'PadThai','Padthai'], amount=100, media='Photo', use_smart_location_hashtags=True)  # 'ramadan', 'Ramadan',
+        session.like_by_tags(['padthai', 'PadThai','Padthai'], amount=100, media='Photo')  # 'ramadan', 'Ramadan', , use_smart_location_hashtags=True
 
 
 schedule.every(1).second.do(job)
